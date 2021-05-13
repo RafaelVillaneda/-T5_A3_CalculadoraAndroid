@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">CalculadoraAndroid</string>
+
+    <string name="btnPorcentaje">%</string>
+    <string name="btn_CE">CE</string>
+    <string name="btn_C">C</string>
+    <string name="btn_borrar">Borrar</string>
+    <string name="btn_1_x">1/x</string>
+    <string name="btn_x2">χ²</string>
+    <string name="btn_raiz">√</string>
+    <string name="btn_div">/</string>
+
+    <string name="btn_1">1</string>
+    <string name="btn_2">2</string>
+    <string name="btn_3">3</string>
+    <string name="btn_4">4</string>
+    <string name="btn_5">5</string>
+    <string name="btn_6">6</string>
+    <string name="btn_7">7</string>
+    <string name="btn_8">8</string>
+    <string name="btn_9">9</string>
+    <string name="btn_0">0</string>
+
+    <string name="btn_por">*</string>
+    <string name="btn_menos">-</string>
+    <string name="btn_mas">+</string>
+    <string name="btn_Igual">=</string>
+
+    <string name="btn_mas_menos">+/-</string>
+    <string name="btn_punto">.</string>
+
+
 </resources>
