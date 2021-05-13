@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CalculadoraAndroid</string>
+    <string name="app_name">Calculadora</string>
 
     <string name="btnPorcentaje">%</string>
     <string name="btn_CE">CE</string>
