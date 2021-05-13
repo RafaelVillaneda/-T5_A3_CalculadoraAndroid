@@ -12,6 +12,7 @@
         android:layout_height="68dp"
         android:layout_marginStart="17dp"
         android:layout_marginTop="31dp"
+        android:onClick="botonCuadrado"
         android:text="@string/btn_x2"
         app:layout_constraintStart_toEndOf="@+id/btn_uno_sobre_x"
         app:layout_constraintTop_toBottomOf="@+id/btn_CE" />
@@ -129,6 +130,7 @@
         android:layout_height="68dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="36dp"
+        android:onClick="botonResiduo"
         android:text="@string/btnPorcentaje"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -139,6 +141,7 @@
         android:layout_height="68dp"
         android:layout_marginStart="17dp"
         android:layout_marginTop="37dp"
+        android:onClick="botonCE"
         android:text="@string/btn_CE"
         app:layout_constraintStart_toEndOf="@+id/btn_porcentaje"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -149,6 +152,7 @@
         android:layout_height="68dp"
         android:layout_marginStart="27dp"
         android:layout_marginTop="37dp"
+        android:onClick="botonC"
         android:text="@string/btn_C"
         app:layout_constraintStart_toEndOf="@+id/btn_CE"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -159,6 +163,7 @@
         android:layout_height="68dp"
         android:layout_marginStart="27dp"
         android:layout_marginTop="31dp"
+        android:onClick="botonRaiz"
         android:text="@string/btn_raiz"
         app:layout_constraintStart_toEndOf="@+id/btn_cuadrado"
         app:layout_constraintTop_toBottomOf="@+id/btn_C" />
@@ -212,6 +217,7 @@
         android:layout_height="68dp"
         android:layout_marginStart="21dp"
         android:layout_marginTop="37dp"
+        android:onClick="botonBorrar"
         android:text="@string/btn_borrar"
         app:layout_constraintStart_toEndOf="@+id/btn_C"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -222,6 +228,7 @@
         android:layout_height="68dp"
         android:layout_marginStart="21dp"
         android:layout_marginTop="31dp"
+        android:onClick="botonDiv"
         android:text="@string/btn_div"
         app:layout_constraintStart_toEndOf="@+id/btn_raiz"
         app:layout_constraintTop_toBottomOf="@+id/btn_Borrar" />
@@ -232,6 +239,7 @@
         android:layout_height="68dp"
         android:layout_marginStart="21dp"
         android:layout_marginTop="23dp"
+        android:onClick="botonpor"
         android:text="@string/btn_por"
         app:layout_constraintStart_toEndOf="@+id/btn_9"
         app:layout_constraintTop_toBottomOf="@+id/btn_div" />
@@ -242,6 +250,7 @@
         android:layout_height="68dp"
         android:layout_marginStart="21dp"
         android:layout_marginTop="25dp"
+        android:onClick="botonResta"
         android:text="@string/btn_menos"
         app:layout_constraintStart_toEndOf="@+id/btn_6"
         app:layout_constraintTop_toBottomOf="@+id/btn_por" />
@@ -252,6 +261,7 @@
         android:layout_height="68dp"
         android:layout_marginStart="21dp"
         android:layout_marginTop="22dp"
+        android:onClick="botonSuma"
         android:text="@string/btn_mas"
         app:layout_constraintStart_toEndOf="@+id/btn_3"
         app:layout_constraintTop_toBottomOf="@+id/btn_menos" />
@@ -262,6 +272,7 @@
         android:layout_height="68dp"
         android:layout_marginStart="21dp"
         android:layout_marginTop="27dp"
+        android:onClick="igual"
         android:text="@string/btn_Igual"
         app:layout_constraintStart_toEndOf="@+id/btn_punto"
         app:layout_constraintTop_toBottomOf="@+id/btn_mas" />
