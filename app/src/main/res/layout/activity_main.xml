@@ -54,22 +54,12 @@
         android:id="@+id/btn_0"
         android:layout_width="70dp"
         android:layout_height="68dp"
-        android:layout_marginStart="17dp"
+        android:layout_marginStart="103dp"
         android:layout_marginTop="27dp"
         android:onClick="boton0"
         android:text="@string/btn_0"
-        app:layout_constraintStart_toEndOf="@+id/btn_cambioSigno"
-        app:layout_constraintTop_toBottomOf="@+id/btn_2" />
-
-    <Button
-        android:id="@+id/btn_cambioSigno"
-        android:layout_width="70dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/btn_mas_menos"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_1" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_2" />
 
     <Button
         android:id="@+id/btn_1"
@@ -110,6 +100,7 @@
         android:layout_height="68dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
+        android:onClick="unoSobreX"
         android:text="@string/btn_1_x"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_porcentaje" />
@@ -207,6 +198,7 @@
         android:layout_height="68dp"
         android:layout_marginStart="27dp"
         android:layout_marginTop="27dp"
+        android:onClick="botonpunto"
         android:text="@string/btn_punto"
         app:layout_constraintStart_toEndOf="@+id/btn_0"
         app:layout_constraintTop_toBottomOf="@+id/btn_3" />

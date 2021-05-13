@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     String operacionRelaizar="?";
     String operacion="";
-    byte limiOp=1;
+    byte limiOp=1,masMenos=-1;
     TextView mostrar;
 
     @Override
@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
     public void botonResiduo(View v){
         if(limiOp>0) {
             operacion = operacion + "%";
+            operacionRelaizar="%";
             mostrar.setText(operacion);
         }
     }
@@ -81,17 +82,25 @@ public class MainActivity extends AppCompatActivity {
         }
         mostrar.setText(String.valueOf(raiz));
     }
+    public void botonpunto(View v){
+        operacion=operacion+".";
+        mostrar.setText(operacion);
+    }
     public void botonCE(View v){
+        operacion="";
         mostrar.setText("");
     }
     public void botonC(View v){
         mostrar.setText("");
+        operacion="";
     }
     public void botonBorrar(View v){//"±"
-        String temp=operacion;
-        temp=temp.substring(0,temp.length()-1);
-        operacion=temp;
-        mostrar.setText(operacion);
+        if(!operacion.equals("")) {
+            String temp = operacion;
+            temp = temp.substring(0, temp.length() - 1);
+            operacion = temp;
+            mostrar.setText(operacion);
+        }
     }
     public void botonpor(View v){
         if(limiOp>0) {
@@ -125,37 +134,63 @@ public class MainActivity extends AppCompatActivity {
             mostrar.setText(operacion);
         }
     }
+    public void unoSobreX(View v){
+        if(limiOp==1 && !operacion.equals("")){
+            double p1=Double.parseDouble(operacion);
+            p1=1/p1;
+            mostrar.setText(String.valueOf(p1));
+            operacion="";
+        }
+    }
+
     public void igual(View v){
         String[] parts;
         limiOp++;
         if(operacionRelaizar.equals("±")){
-            parts = operacionRelaizar.split("±");
-            double p1 = Double.parseDouble(parts[0]);
-            double p2 = Double.parseDouble(parts[1]);
-            p1 = p1 + p2;
-            mostrar.setText(String.valueOf(p1));
-            operacion="";
+            parts = operacion.split("±");
+            if(parts.length==2) {
+                double p1 = Double.parseDouble(parts[0]);
+                double p2 = Double.parseDouble(parts[1]);
+                p1 = p1 + p2;
+                mostrar.setText(String.valueOf(p1));
+                operacion = "";
+            }
         }else  if(operacionRelaizar.equals("-")) {
             parts = operacion.split("-");
-            double p1 = Double.parseDouble(parts[0]);
-            double p2 = Double.parseDouble(parts[1]);
-            p1 = p1 - p2;
-            mostrar.setText(String.valueOf(p1));
-            operacion="";
+            if(parts.length==2) {
+                double p1 = Double.parseDouble(parts[0]);
+                double p2 = Double.parseDouble(parts[1]);
+                p1 = p1 - p2;
+                mostrar.setText(String.valueOf(p1));
+                operacion = "";
+            }
         }else  if(operacionRelaizar.equals("~")){
             parts = operacion.split("~");//-----------------------------------
-            double p1=Double.parseDouble(parts[0]);
-            double p2=Double.parseDouble(parts[1]);
-            p1=p1*p2;
-            mostrar.setText(String.valueOf(p1));
-            operacion="";
+            if(parts.length==2) {
+                double p1 = Double.parseDouble(parts[0]);
+                double p2 = Double.parseDouble(parts[1]);
+                p1 = p1 * p2;
+                mostrar.setText(String.valueOf(p1));
+                operacion = "";
+            }
         }else  if(operacionRelaizar.equals("/")){
             parts = operacion.split("/");
-            double p1=Double.parseDouble(parts[0]);
-            double p2=Double.parseDouble(parts[1]);
-            p1=p1/p2;
-            mostrar.setText(String.valueOf(p1));
-            operacion="";
+            if(parts.length==2) {
+                double p1 = Double.parseDouble(parts[0]);
+                double p2 = Double.parseDouble(parts[1]);
+                p1 = p1 / p2;
+                mostrar.setText(String.valueOf(p1));
+                operacion = "";
+            }
+        }else  if(operacionRelaizar.equals("%")){
+            parts = operacion.split("%");
+            if(parts.length==2) {
+                double p1 = Double.parseDouble(parts[0]);
+                double p2 = Double.parseDouble(parts[1]);
+                p1 = p1 % p2;
+                mostrar.setText(String.valueOf(p1));
+                operacion = "";
+            }
         }
     }
 
